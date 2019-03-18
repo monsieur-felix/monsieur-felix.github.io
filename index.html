@@ -1,1 +1,55 @@
-Hello Worlds
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Custom Site</title>
+	<link rel="stylesheet" type="text/css" href="./css/syntax.css" />
+	
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="topbar">
+			<!-- <div id="logo_txt">AIRBUS</div> -->
+			<div id="logo"><img src='http://www.gamit.co.uk/wp-content/uploads/2016/03/airbus_logo_family_gamit.png'> </div>
+		</div>
+		<div id="navbar">
+			<ul>
+				<li class="active">Home</li>
+				<li>Gallery</li>
+				<li>Blog</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class="banner" id="one"><!--banner--></div>
+		<div class="section" id="one">
+			<div class='box'></div>
+			<div class='box'></div>
+			<div class='box'></div>
+		</div>
+	</div>
+	<div class="banner" id="two"><!--banner--></div>
+	<div class="section" id="one">
+			<div class='box'></div>
+			<div class='box'></div>
+			<div class='box'></div>
+		</div>
+	<script>
+		window.onscroll = function() {
+			makeSticky();
+		};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function makeSticky() {
+			if (window.pageYOffset >= sticky) {
+				navbar.classList.add("sticky")
+			} else {
+				navbar.classList.remove("sticky");
+			}
+		}
+	</script>
+</body>
+
+</html>
